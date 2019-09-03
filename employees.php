@@ -38,8 +38,8 @@ include 'connection.php';
     <div class="container">
         <form action="" method="get">
         <button type="submit" class="btn btn-warning btn-md"><a href="index.php" class="text-light">Add New</a></button>
-            <table class="table table-hover table-bordered">
-                <thead class="text-center thead-dark">
+            <table class="table table-hover table-bordered table-striped">
+                <thead class="text-center table-dark">
                     <tr>
                         <th>Id</th>
                         <th>Name</th>
@@ -57,7 +57,7 @@ include 'connection.php';
                         while($row = mysqli_fetch_assoc($result)) 
                         {
                              ?>
-                    <tr class="table-dark text-center">
+                    <tr class="text-center">
                         <td><?php echo $row["id"];?></td>
                         <td><?php echo $row["empname"];?></td>
                         <td><?php echo $row["eaddress"];?></td>

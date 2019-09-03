@@ -1,16 +1,21 @@
 <?php include 'connection.php';
 if(isset($_POST['submit']))
 {
-    $id=GET['id'];
+    $id=$_GET['id'];
     $name=$_POST['name'];
     $address=$_POST['address'];
     $gender=$_POST['gender'];
     $mobile=$_POST['mobile'];
     $email=$_POST['email'];
-    $sql = "update table tblemployee set id=$id,name='$name',address='$address',gender='$gender',mobile='$mobile',email='$email' where id=$id ";
+    $sql = "update tblemployee set id=$id,empname='$name',eaddress='$address',gender='$gender',mobile='$mobile',email='$email' where id=$id ";
 
-    $query=mysqli_query($conn,$sql);
-    header('location:employees.php');
+
+    if ($conn->query($sql) === TRUE) {
+        header("Location:employees.php");
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+   
 }
 
  ?>
