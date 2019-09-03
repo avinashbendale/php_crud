@@ -7,7 +7,7 @@ if(isset($_POST['submit']))
     $gender=$_POST['gender'];
     $mobile=$_POST['mobile'];
     $email=$_POST['email'];
-    $sql = "update table tblemployee set id=$id,name='$name', address= '$address',gender='$gender',mobile='$mobile',email='email' where id=$id ";
+    $sql = "update table tblemployee set id=$id,name='$name',address='$address',gender='$gender',mobile='$mobile',email='$email' where id=$id ";
 
     $query=mysqli_query($conn,$sql);
     header('location:employees.php');
