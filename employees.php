@@ -64,8 +64,8 @@ include 'connection.php';
                         <td><?php echo $row["gender"];?></td>
                         <td><?php echo $row["mobile"];?></td>
                         <td><?php echo $row["email"];?></td>
-                        <td><button type="submit" class="btn btn-primary btn-sm bt"><a href="delete.php? id= <?php echo $row['id'];?>" class="text-light"> Delete</a></button></td>
-                        <td><button type="submit" class="btn btn-danger btn-sm bt" id=<?php echo $row["id"];?>>Delete</button>
+                        <td><button type="submit" class="btn btn-warning btn-sm"><a href="update.php? id= <?php echo $row['id'];?>" class="text-light"> Update</a></button></td>
+                        <td><button type="submit" class="btn btn-danger btn-sm"><a href="delete.php? id= <?php echo $row['id'];?>" class="text-light"> Delete</a></button></td>
                         </td>
                     </tr>
                     <?php
